@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Form_Group{
+    display:flex;
+    justify-content:center ;
+    gap: 5px;
+    margin: 10px;
+    margin-left: 40px;
+}
+    
