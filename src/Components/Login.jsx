@@ -1,42 +1,55 @@
-import "../style/login.css"
-export default function Login (){
+import { useNavigate } from "react-router-dom";
+import "../style/Login.css";
 
-    return(
+export default function Login() {
+  const navigate = useNavigate();
 
-        <form action="" method="POST">
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate("/Register"); 
+  };
 
-            <div className="Form_Group">
-                <h1>BoardAI</h1>
-            </div>
+  return (
+    <div className="LoginCon">
+      <div className="LoginImg">
+        <img
+          src="https://i.pinimg.com/736x/cd/2c/de/cd2cde0acd7fe399e5f3b0f66e431125.jpg"
+          alt="Login Illustration"
+        />
+      </div>
 
-            <div className="Form_Group">
-               <label >Full Name</label>
-               <input type="text" name="NameUsu" id="NameUsu" placeholder="Example... Mark " />
+      <div className="LoginForm">
+        <form className="LoginF" onSubmit={handleSubmit}>
+          <h1>BoardAI</h1>
 
-            </div>
+          <div className="Form">
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Ejemplo@gmail.com"
+            />
+          </div>
 
-            <div className="Form_Group">
-                <label >Email</label>
-                <input type="email" name="EmailUsu" id="EmailUsu" placeholder="Example... Mark@gmail.com " required />
-            </div>
+          <div className="Form">
+            <label>Password</label>
+            <input type="password" name="password" id="password" />
+          </div>
 
-            <div className="Form_Group">
-                <label >Rol</label>
-                <select name="RolUsu" id="RolUsu" >
-                    <option value="one">User</option>
-                    <option value="two">Administrato</option>
-                </select>
-            </div>
+          <div className="Form">
+            <button type="submit" id="submit">
+              Next
+            </button>
+          </div>
 
-            <div className="Form_Group">
-                <label >Password</label>
-                <input type="password" name="PasswUsu" id="PasswUsu" required />
-            </div>
-            
-            <div className="Form_Group">
-                <button  type="submit" name="SendUsu" id="SendUsu">Send</button>
-            </div>
-
+          
+          <p className="CreateLogin">
+            ¿Don't have an account??{" "}
+            <span onClick={() => navigate("/Register")}>Create one</span>
+          </p>
         </form>
-    )
+      </div>
+    </div>
+  );
 }

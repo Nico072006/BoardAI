@@ -10,13 +10,13 @@ body{
     background-color: rgb(2, 19, 252);
 }
 /*Dividimos el formulario con la imagen */
-.LoginCon{
+.RegistroCon{
     display: flex; 
     width: 100vw;
     height: 100vh;
 }
 /*Centramos el formulario en la mitad y le agregamos un color encima */
-.LoginForm{
+.RegistroForm{
     flex: 1;
     display: flex;
     justify-content: center;
@@ -25,16 +25,16 @@ body{
 }
 
 /*Logramos darle una forma de tarjeta al ancho al formulario y un rgb a la tarjeta*/
-.LoginF{
+.RegistroF{
     width: 350px;
     padding: 40px 55px;
     border-radius: 15px ;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.623) ;
 }
 /*Le Damos color y vida al titulo */
-.LoginF h1{
+.RegistroF h1{
     text-align: center;
-    color:#0004ff ;
+    color:#eb0c0c ;
     margin-bottom:30px ;
     font-family: "Bebas Neue", sans-serif;
 }
@@ -58,7 +58,7 @@ body{
 .Form select{
     padding: 10px 15px;
     border-radius: 20px;
-    border: 0.5px solid #0004ff;
+    border: 0.5px solid #f73333a2;
     outline: none;
     transition: all 0.3s ease;
 }
@@ -74,7 +74,7 @@ body{
 button{
     width: 100%;
     padding: 10px ;
-    background-color: #0004ff;
+    background-color: #ff0000c9;
     color: white;
     border: none;
     border-radius:20px ;
@@ -86,19 +86,19 @@ button{
 }
 /*Cambio de color */
 button:hover{
-    background-color: rgba(255, 0, 0, 0.822);
+    background-color: rgba(0, 0, 255, 0.822);
     transform: translateY(-2px);
 }
 
 /*Arreglamos un poco la imagen*/
-.LoginImg{
+.RegistroImg{
     flex:1;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #ffffff ;
 }
-.LoginImg img{
+.RegistroImg img{
     width: 70%;
     height: 70%;
     border-radius: 15px;
@@ -106,23 +106,4 @@ button:hover{
     box-shadow: 0 8px 20px rgba(255, 1, 1, 0.1);
 }
 
-  
-.CreateLogin {
-    margin-top: 10px;
-    text-align: center;
-    font-size: 14px;
-    color: #555;
-  }
-  
-  .CreateLogin span {
-    color:#0004ff;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .CreateLogin span:hover {
-    text-decoration: underline;
-    color: #ff0000;
-  }
   
