@@ -34,7 +34,7 @@ body{
 /*Le Damos color y vida al titulo */
 .RegistroF h1{
     text-align: center;
-    color:#eb0c0c ;
+    color:#ff5100 ;
     margin-bottom:30px ;
     font-family: "Bebas Neue", sans-serif;
 }
@@ -74,7 +74,7 @@ body{
 button{
     width: 100%;
     padding: 10px ;
-    background-color: #ff0000c9;
+    background-color: #b63030c9;
     color: white;
     border: none;
     border-radius:20px ;
