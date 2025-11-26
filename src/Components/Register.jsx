@@ -1,32 +1,21 @@
+import React from "react";
 import "../style/Register.css";
 
-export default function Register() {
+export default function Registro({ handleSubmit, formRef, mensaje }) {
   return (
     <div className="RegistroCon">
-      {/* Sección del formulario */}
       <div className="RegistroForm">
-        <form className="RegistroF">
+        <form className="RegistroF" ref={formRef} onSubmit={handleSubmit}>
           <h1>BoardAI</h1>
 
           <div className="Form">
             <label>Full Name</label>
-            <input
-              type="text"
-              name="Name"
-              id="Name"
-              placeholder="Nicolas Muñoz "
-            />
+            <input type="text" name="Name" id="Name" placeholder="Nicolas Muñoz" required />
           </div>
 
           <div className="Form">
             <label>Email</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder=" Ejemplo@gmail.com"
-              required
-            />
+            <input type="email" name="email" id="email" placeholder="Ejemplo@gmail.com" required />
           </div>
 
           <div className="Form">
@@ -43,14 +32,15 @@ export default function Register() {
           </div>
 
           <div className="Form">
-            <button href="" type="submit" name="submit" id="submit">
-            Register
+            <button type="submit" name="submit" id="submit">
+              Register
             </button>
           </div>
+
+          {mensaje && <p className="mensaje">{mensaje}</p>}
         </form>
       </div>
 
-      {/* Sección de la imagen */}
       <div className="RegistroImg">
         <img
           src="https://i.pinimg.com/736x/cd/2c/de/cd2cde0acd7fe399e5f3b0f66e431125.jpg"

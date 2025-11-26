@@ -1,14 +1,7 @@
-import { useNavigate } from "react-router-dom";
+import React from "react";
 import "../style/Login.css";
 
-export default function Login() {
-  const navigate = useNavigate();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    navigate("/Register"); 
-  };
-
+export default function Login({ handleSubmit, formRef, mensaje }) {
   return (
     <div className="LoginCon">
       <div className="LoginImg">
@@ -19,7 +12,7 @@ export default function Login() {
       </div>
 
       <div className="LoginForm">
-        <form className="LoginF" onSubmit={handleSubmit}>
+        <form className="LoginF" ref={formRef} onSubmit={handleSubmit}>
           <h1>BoardAI</h1>
 
           <div className="Form">
@@ -29,24 +22,25 @@ export default function Login() {
               name="email"
               id="email"
               placeholder="Ejemplo@gmail.com"
+              required
             />
           </div>
 
           <div className="Form">
             <label>Password</label>
-            <input type="password" name="password" id="password" />
+            <input type="password" name="password" id="password" required />
           </div>
 
           <div className="Form">
             <button type="submit" id="submit">
-              Next
+              Login
             </button>
           </div>
 
-          
+          {mensaje && <p className="mensaje">{mensaje}</p>}
+
           <p className="CreateLogin">
-            ¿Don't have an account??{" "}
-            <span onClick={() => navigate("/Register")}>Create one</span>
+            ¿Don't have an account?? <span onClick={() => window.location.href="/Register"}>Create one</span>
           </p>
         </form>
       </div>
