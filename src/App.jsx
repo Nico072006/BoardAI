@@ -4,6 +4,8 @@ import ControllLogin from "./Page/ControllLogin"
 import Start from "./Page/Index"
 import Teacher from "./Components/ProfileTeacher"
 import Student from "./Components/ProfileStudent"
+import CardsCarrusel from "./Components/CardsCarrusel"
+
 
 function App() {
   return (
@@ -15,8 +17,7 @@ function App() {
         <Route path="/Start" element={<Start />} />
         <Route path="/teacher" element={<Teacher />} />
         <Route path="/student" element={<Student />} />
-
-
+        <Route path="/CardsCarrusel" element={<CardsCarrusel/>}/>
       </Routes>
     </BrowserRouter>
   )

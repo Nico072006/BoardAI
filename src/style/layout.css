@@ -1,0 +1,16 @@
+/* Altura del header gamer */
+.header-espacio {
+    padding-top: 70px; /* Ajusta según tu header */
+}
+
+/* Cuando el menú esté abierto */
+.menu-abierto {
+    padding-left: 240px; /* El ancho de tu menú */
+    transition: padding-left 0.3s ease;
+}
+
+/* Cuando esté cerrado */
+.menu-cerrado {
+    padding-left: 0;
+    transition: padding-left 0.3s ease;
+}

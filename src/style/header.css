@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;600&display=swap');
+
+/* CONTENEDOR DEL HEADER */
+.Contheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 25px;
+    background: #0b0b0d; /* Negro gamer */
+    border-bottom: 2px solid #ff1a1a; /* Línea roja fina */
+}
+
+/* TÍTULO estilo gamer minimalista */
+.Titulo {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-left: 70px;
+}
+
+/* Contenedor del perfil */
+.PerfilCont {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Botón del perfil estilo HUD */
+.BtnPerfil {
+    background: #000;
+    border: 2px solid #0051ff; /* Azul eléctrico */
+    padding: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+}
+
+/* Efecto hover estilo videojuego */
+.BtnPerfil:hover {
+    border-color: #ff1a1a; /* Se vuelve rojo */
+    transform: scale(1.08);
+    box-shadow: 0 0 10px #ff1a1a;
+}
+
+/* Imagen del perfil */
+.icono-perfil {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+}
