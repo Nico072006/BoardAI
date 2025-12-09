@@ -1,7 +1,48 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom"; // <- para redirigir
 import "../style/Login.css";
 
-export default function Login({ handleSubmit, formRef, mensaje }) {
+export default function Login() {
+  const formRef = useRef();
+  const [mensaje, setMensaje] = useState("");
+  const navigate = useNavigate(); // <- hook de navegación
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    const formData = new FormData(formRef.current);
+    const email = formData.get("email");
+    const contrasena = formData.get("password");
+  
+    try {
+      const response = await fetch("http://localhost:5000/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include", 
+        body: JSON.stringify({ email, contrasena }),
+      });
+  
+      const data = await response.json();
+  
+      if (data.success) {
+        // Redirigir según rol
+        if (data.rol === "profesor") {
+          navigate("/teacher");
+        } else if (data.rol === "estudiante") {
+          navigate("/student");
+        } else {
+          navigate("/start");
+        }
+      } else {
+        setMensaje(data.message);
+      }
+    } catch (error) {
+      console.error(error);
+      setMensaje("Error de conexión con el servidor");
+    }
+  };
+  
+
   return (
     <div className="LoginCon">
       <div className="LoginImg">
@@ -40,7 +81,10 @@ export default function Login({ handleSubmit, formRef, mensaje }) {
           {mensaje && <p className="mensaje">{mensaje}</p>}
 
           <p className="CreateLogin">
-            ¿Don't have an account?? <span onClick={() => window.location.href="/Register"}>Create one</span>
+            ¿Don't have an account??{" "}
+            <span onClick={() => window.location.href = "/Register"}>
+              Create one
+            </span>
           </p>
         </form>
       </div>

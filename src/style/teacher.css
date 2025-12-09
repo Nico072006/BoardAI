@@ -1,0 +1,176 @@
+/* Fondo general */
+.fondoProfe {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f5f5, #dbe3f0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Bloque principal con forma */
+.bloque-elegante {
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 30px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Header con imagen y título */
+.header-profe {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.foto-profe {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid #000;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    margin-bottom: 15px;
+}
+
+.titulo-profe {
+    font-size: 28px;
+    font-weight: 600;
+    color: #2b4d7b;
+}
+
+/* Info del profesor */
+.info-profe {
+    background: #f0f4fb;
+    padding: 20px;
+    border-radius: 18px;
+    border: 2px solid #d0d7e5;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.info-profe p {
+    margin: 8px 0;
+    font-weight: 500;
+    color: #1a2b4c;
+}
+
+.info-profe span {
+    font-weight: 700;
+}
+
+/* Botones */
+.botones-profe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-profe {
+    flex: 1 1 45%;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    transition: transform 0.15s ease, background 0.25s ease;
+}
+
+.btn-profe:hover {
+    transform: scale(1.05);
+}
+
+/* Colores de los botones */
+.azul {
+    background: #3b6cff;
+}
+
+.azul:hover {
+    background: #2b54c7;
+}
+
+.verde {
+    background: #4CAF50;
+}
+
+.verde:hover {
+    background: #3e8e41;
+}
+
+.amarillo {
+    background: #f0ad4e;
+}
+
+.amarillo:hover {
+    background: #d69532;
+}
+
+.rojo {
+    background: #d64545;
+}
+
+.rojo:hover {
+    background: #b63131;
+}
+
+/* Panel de estudiantes */
+.panel-estudiantes {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 700px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #d7dbe4;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.panel-estudiantes h2 {
+    text-align: center;
+    color: #2b4d7b;
+    margin-bottom: 15px;
+}
+
+/* Lista de estudiantes */
+.lista-estudiantes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.item-estudiante {
+    background: #f0f4fb;
+    padding: 12px 18px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #d0d7e5;
+}
+
+.btn-eliminar {
+    background: #d64545;
+    border: none;
+    border-radius: 10px;
+    padding: 6px 12px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.25s ease;
+}
+
+.btn-eliminar:hover {
+    background: #b63131;
+    transform: scale(1.05);
+}
