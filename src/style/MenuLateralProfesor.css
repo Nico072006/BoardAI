@@ -1,0 +1,44 @@
+.menu-profe-container {
+    width: 250px;
+    background: #111;
+    height: 100vh;
+    color: white;
+    padding-top: 20px;
+  }
+  
+  .menu-profe {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .menu-titulo {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #00d4ff;
+  }
+  
+  .menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    transition: 0.2s;
+    font-size: 1rem;
+  }
+  
+  .menu-item:hover {
+    background: #00d4ff;
+    color: black;
+    transform: translateX(4px);
+    cursor: pointer;
+  }
+  

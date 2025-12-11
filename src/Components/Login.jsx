@@ -1,11 +1,12 @@
 import React, { useRef, useState } from "react";
-import { useNavigate } from "react-router-dom"; // <- para redirigir
+import { useNavigate } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import "../style/Login.css";
 
 export default function Login() {
   const formRef = useRef();
   const [mensaje, setMensaje] = useState("");
-  const navigate = useNavigate(); // <- hook de navegación
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,11 +28,11 @@ export default function Login() {
       if (data.success) {
         // Redirigir según rol
         if (data.rol === "profesor") {
-          navigate("/teacher");
+          navigate("/ProfesorStart");
         } else if (data.rol === "estudiante") {
-          navigate("/student");
+          navigate("/Start");
         } else {
-          navigate("/start");
+          navigate("/Start");
         }
       } else {
         setMensaje(data.message);
@@ -82,9 +83,9 @@ export default function Login() {
 
           <p className="CreateLogin">
             ¿Don't have an account??{" "}
-            <span onClick={() => window.location.href = "/Register"}>
+            <Link to="/Register" className="CreateOneLink">
               Create one
-            </span>
+            </Link>
           </p>
         </form>
       </div>

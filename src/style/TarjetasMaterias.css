@@ -1,0 +1,83 @@
+/*  CONTENEDOR GRID */
+.materias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 30px;
+}
+
+/*  TEXTO CUANDO NO HAY MATERIAS */
+.sin-materias {
+  color: #e5e7eb;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/*  TARJETA DE UNA MATERIA */
+.materia-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+/* HOVER EFECTO */
+.materia-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  border-color: #3b82f6;
+}
+
+/* TITULO DE LA MATERIA */
+.materia-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+  color: #111827;
+  font-weight: 700;
+}
+
+/* DESCRIPCIÓN */
+.materia-card p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin: 0 0 15px;
+}
+
+/*  BOTÓN */
+.btn-tarea {
+  background: #3b82f6;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+/* HOVER BOTÓN */
+.btn-tarea:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.btn-eliminar {
+  background: #ef4444;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .2s;
+  font-weight: 600;
+}
+
+.btn-eliminar:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+}

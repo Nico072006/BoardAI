@@ -1,0 +1,124 @@
+/* Layout principal - estructura de toda la página */
+.IA-container {
+    display: flex;              /* Coloco todo en fila: sidebar + chat */
+    width: 100vw;               /* Ocupa todo el ancho de la pantalla */
+    height: 100vh;              /* Ocupa todo el alto */
+    background: #f5f5f5;        /* Fondo gris claro */
+    font-family: Arial, sans-serif; /* Fuente general */
+  }
+  
+  /* Sidebar - aquí van los chats y botones */
+  .IA-sidebar {
+    width: 250px;               /* Ancho del panel lateral */
+    background: #111;           /* Fondo oscuro */
+    color: white;               /* Texto blanco */
+    padding: 20px;              /* Separación interna */
+  }
+  
+  /* Título del sidebar */
+  .IA-sidebar h2 {
+    margin-bottom: 20px;        /* Espacio inferior */
+    font-size: 25px;            /* Tamaño del texto */
+  }
+  
+  /* Lista de chats anteriores */
+  .IA-sidebar ul {
+    list-style: none;           /* Quita las viñetas */
+    padding: 0;                 /* Borro padding por defecto */
+  }
+  
+  /* Ítems del historial */
+  .IA-sidebar li {
+    margin: 15px 0;             /* Espaciado entre chats */
+    cursor: pointer;            /* Puntero tipo botón */
+  }
+  
+  /* Botón para crear chat nuevo */
+  .new-chat {
+    width: 100%;                /* Ocupa todo el ancho del sidebar */
+    background: #0a84ff;        /* Color azul Apple */
+    border: none;               /* Quita borde */
+    padding: 10px;              /* Relleno interno */
+    color: white;               /* Texto blanco */
+    margin-bottom: 20px;        /* Separación abajo */
+    border-radius: 6px;         /* Bordes redondeados */
+    cursor: pointer;            /* Cursor clickeable */
+  }
+  
+  /* Chat area - todo el espacio donde va el chat */
+  .IA-chat {
+    flex: 1;                    /* Ocupa todo el espacio disponible */
+    display: flex;
+    flex-direction: column;     /* Mensajes arriba, input abajo */
+  }
+  
+  /* Contenedor de mensajes */
+  .IA-messages {
+    flex: 1;                    /* Ocupa el máximo espacio posible */
+    padding: 20px;              /* Espacio interno */
+    overflow-y: auto;           /* Scroll vertical si se llena */
+  }
+  
+  /* Estilos generales para mensajes */
+  .msg {
+    max-width: 70%;             /* El mensaje nunca ocupa más del 70% */
+    margin-bottom: 15px;        /* Espaciado entre mensajes */
+    padding: 12px;              /* Espacio interno */
+    border-radius: 10px;        /* Bordes redondeados */
+  }
+  
+  /* Mensaje del usuario */
+  .msg.user {
+    background: #d9e6ff;        /* Azul clarito */
+    align-self: flex-end;       /* Lo alineo a la derecha */
+  }
+  
+  /* Mensaje del agente IA */
+  .msg.agent {
+    background: white;          /* Fondo blanco */
+    border: 1px solid #ddd;     /* Bordecito gris */
+    align-self: flex-start;     /* Lo alineo a la izquierda */
+  }
+  
+  /* Nombre del archivo subido */
+  .archivo-preview {
+    display: block;             /* Se muestra como bloque */
+    margin-top: 5px;            /* Espacio con el mensaje */
+    color: #444;                /* Color gris suave */
+  }
+  
+  /* Zona inferior donde está el input */
+  .IA-input {
+    display: flex;              /* Input + botón archivo + enviar */
+    padding: 15px;
+    background: white;
+    border-top: 1px solid #ccc; /* Línea separadora */
+    align-items: center;
+    gap: 10px;                  /* Espacio entre elementos */
+  }
+  
+  /* Input de texto */
+  .IA-input input {
+    flex: 1;                    /* Toma el espacio restante */
+    padding: 12px;
+    border: 1px solid #ccc;     /* Bordes ligeros */
+    border-radius: 8px;         /* Bordes suavizados */
+  }
+  
+  /* Botón/ícono para subir archivos */
+  .file-btn {
+    font-size: 22px;            /* Tamaño grande */
+    cursor: pointer;            /* Cursor de botón */
+  }
+  
+  /* Botón de enviar */
+  .send-btn {
+    background: #0a84ff;        /* Azul moderno */
+    color: white;               /* Texto blanco */
+    padding: 12px 18px;         /* Tamaño del botón */
+    border-radius: 10px;        /* Bordes redondeados */
+    border: none;               /* Sin borde */
+    cursor: pointer;            /* Clickeable */
+    font-size: 18px;            /* Tamaño del texto */
+  }
+  

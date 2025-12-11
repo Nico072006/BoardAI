@@ -1,0 +1,56 @@
+.contenedor-estudiantes {
+    padding: 20px;
+    color: white;
+  }
+  
+  .lista-materias {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .btn-materia {
+    background: #0f172a;
+    color: #38bdf8;
+    border: 2px solid #38bdf8;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .btn-materia:hover {
+    background: #1e293b;
+  }
+  
+  .btn-materia.activa {
+    background: #38bdf8;
+    color: #0f172a;
+  }
+  
+  .lista-estudiantes {
+    margin-top: 20px;
+  }
+  
+  .tarjeta-estudiante {
+    background: #1e293b;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border-left: 4px solid #38bdf8;
+    transition: 0.2s;
+  }
+  
+  .tarjeta-estudiante:hover {
+    transform: translateX(5px);
+    background: #273449;
+  }
+  
+  .sin-estudiantes {
+    margin-top: 20px;
+    font-style: italic;
+    color: #94a3b8;
+  }
+  

@@ -7,7 +7,8 @@
 /*Fondo de la pagina*/
 body{
     margin: 0;
-    background-color: rgb(2, 19, 252);
+
+    
 }
 /*Dividimos el formulario con la imagen */
 .LoginCon{
@@ -114,15 +115,17 @@ button:hover{
     color: #555;
   }
   
-  .CreateLogin span {
-    color:#0004ff;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
+  .CreateOneLink {
+    color: #0004ff;          /* Yo uso este color azul para que se vea como un enlace clásico */
+    font-weight: 600;        /* Le doy un peso seminegrita para que destaque sin ser exagerado */
+    cursor: pointer;         /* Cambio el cursor para que se note que se puede hacer clic */
+    text-decoration: none;   /* Quito el subrayado para que se vea más moderno */
+    transition: 0.3s;        /* Aplico una transición suave cuando cambie el color en hover */
   }
   
-  .CreateLogin span:hover {
-    text-decoration: underline;
-    color: #ff0000;
+  .CreateOneLink:hover {
+    color: #ff0000;          /* Cambio a rojo para destacar la interacción */
+    text-decoration: underline; /* Le agrego un subrayado para reforzar la sensación de enlace */
   }
+  
   

@@ -1,0 +1,34 @@
+.ProfesorHeader {
+    width: 100%;
+    height: 70px;
+    background: #1d3557;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+  }
+  
+  .TituloProfesor {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .ProfesorPerfilCont {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ProfesorBtnPerfil {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .ProfesorFotoPerfil {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
