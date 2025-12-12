@@ -23,8 +23,9 @@ function ProfesorStart() {
         <CrearMateriaModal close={() => setOpenCrearMateria(false)} />
       )}
 
-      <TarjetasMateriasProfe />
-      <MisEstudiantes/>
+      
+      
+     
     </div>
   );
 }

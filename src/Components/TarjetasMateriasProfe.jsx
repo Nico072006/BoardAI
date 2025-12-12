@@ -53,8 +53,7 @@ export default function TarjetasMateriasProfe() {
           <div key={m.id_materia} className="materia-card">
             <h3>{m.nombre}</h3>
             <p>{m.descripcion}</p>
-            <button className="btn-tarea">➕ Agregar Tarea</button>
-
+            
 
             {/* 🔥 Botón Eliminar */}
             <button

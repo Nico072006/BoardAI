@@ -1,0 +1,80 @@
+.calificaciones-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-volver {
+  background-color: #444;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-volver:hover {
+  background-color: #222;
+}
+
+.entrega-item {
+  background: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.entrega-item p {
+  margin: 6px 0;
+}
+
+.btn-descargar {
+  display: inline-block;
+  background: #0284c7;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+
+.btn-descargar:hover {
+  background: #0369a1;
+}
+
+.calificar-box {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  align-items: center;
+}
+
+.calificar-box input {
+  width: 120px;
+  padding: 8px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+
+.btn-calificar {
+  background: #22c55e;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-calificar:hover {
+  background: #16a34a;
+}

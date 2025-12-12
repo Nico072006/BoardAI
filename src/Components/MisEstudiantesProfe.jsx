@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../style/MisEstudiantes.css";
 
 export default function MisEstudiantes() {
@@ -33,6 +34,11 @@ export default function MisEstudiantes() {
 
   return (
     <div className="estudiantes-container">
+      <p className="VolverAtras">
+            <Link to="/ProfesorStart" className="VolverAtrasLink">
+            ↩︎  volver 
+            </Link>
+      </p>
       <h2 className="titulo">👥 Estudiantes por Materia</h2>
 
       {/* Lista de materias */}
@@ -55,6 +61,7 @@ export default function MisEstudiantes() {
             Estudiantes de <span>{materiaSeleccionada}</span>
           </h3>
 
+
           {estudiantes.length === 0 ? (
             <p className="sin-estudiantes">No hay estudiantes inscritos.</p>
           ) : (
@@ -67,6 +74,9 @@ export default function MisEstudiantes() {
               ))}
             </ul>
           )}
+          
+
+
         </div>
       )}
     </div>

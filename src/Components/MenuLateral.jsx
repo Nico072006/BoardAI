@@ -26,8 +26,13 @@ function MenuLateral(){
             <h2 className="MenuTitulo">Menu</h2>
             <ul className="Opciones">
                 <li className="item-opcion">📢 Notificaciones</li>
-                <li className="item-opcion">📚 Trabajos</li>
-                <li className="item-opcion">👨🏽‍🎓 Clases</li>
+                
+                <li
+                className="item-opcion "
+                onClick={() => navigate("/MisClases")}>
+                👨🏽‍🎓 Clases
+                </li>
+                
                 <li
                 className="item-opcion "
                 onClick={() => navigate("/IA")}>

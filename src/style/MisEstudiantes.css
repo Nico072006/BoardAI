@@ -1,56 +1,137 @@
+/* === CONTENEDOR GENERAL === */
+.estudiantes-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.titulo {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+}
+
+/* === LISTA DE MATERIAS === */
+.lista-materias {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.btn-materia {
+  background: #4a8bff;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s ease;
+  font-weight: 500;
+}
+
+.btn-materia:hover {
+  background: #2b6fe6;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 10px rgba(66, 133, 244, 0.4);
+}
+
+/* === CONTENEDOR ESTUDIANTES === */
 .contenedor-estudiantes {
-    padding: 20px;
-    color: white;
-  }
-  
-  .lista-materias {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .btn-materia {
-    background: #0f172a;
-    color: #38bdf8;
-    border: 2px solid #38bdf8;
-    padding: 10px 14px;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.2s;
-  }
-  
-  .btn-materia:hover {
-    background: #1e293b;
-  }
-  
-  .btn-materia.activa {
-    background: #38bdf8;
-    color: #0f172a;
-  }
-  
-  .lista-estudiantes {
-    margin-top: 20px;
-  }
-  
-  .tarjeta-estudiante {
-    background: #1e293b;
-    padding: 15px;
-    margin-bottom: 12px;
-    border-radius: 10px;
-    border-left: 4px solid #38bdf8;
-    transition: 0.2s;
-  }
-  
-  .tarjeta-estudiante:hover {
-    transform: translateX(5px);
-    background: #273449;
-  }
-  
-  .sin-estudiantes {
-    margin-top: 20px;
-    font-style: italic;
-    color: #94a3b8;
-  }
-  
+  margin-top: 25px;
+  padding: 20px;
+  background: #f7faff;
+  border-radius: 14px;
+  border: 1px solid #e1eaff;
+}
+
+.subtitulo {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  text-align: center;
+  color: #2e4a7f;
+}
+
+.subtitulo span {
+  color: #4a8bff;
+}
+
+/* === LISTA DE ESTUDIANTES === */
+.lista-estudiantes {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.estudiante-card {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #e4e8f1;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  transition: 0.25s ease;
+}
+
+.estudiante-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.estudiante-card h4 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.estudiante-card p {
+  margin: 0;
+  font-size: 15px;
+  color: #666;
+}
+
+/* === TEXTO SIN ESTUDIANTES === */
+.sin-estudiantes {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+  padding: 20px;
+}
+
+.VolverAtras {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.VolverAtrasLink {
+  display: inline-block;
+  background: #4a8bff;
+  padding: 10px 18px;
+  color: white;
+  border-radius: 10px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.VolverAtrasLink:hover {
+  background: #2b6fe6;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 10px rgba(66, 133, 244, 0.4);
+}
