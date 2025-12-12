@@ -9,32 +9,50 @@ export default function IA() {
   const chatEndRef = useRef(null);
   const navigate = useNavigate();
 
-
-  // Scroll automático
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [historial]);
 
-  const enviarMensaje = () => {
+  const enviarMensaje = async () => {
     if (!mensaje.trim() && !archivo) return;
 
-    // Mensaje del usuario
+    // Agregar mensaje del usuario al chat
     setHistorial(prev => [
       ...prev,
       { rol: "user", texto: mensaje, archivo: archivo?.name || null }
     ]);
 
-    // Limpiar
-    setMensaje("");
-    setArchivo(null);
+    // Enviar al backend
+    try {
+      const formData = new FormData();
+      formData.append("mensaje", mensaje);
 
-    // Simular respuesta del bot (solo front)
-    setTimeout(() => {
+      if (archivo) formData.append("archivo", archivo);
+
+      const res = await fetch("http://localhost:8000/chat", {
+
+        method: "POST",
+        body: formData
+      });
+
+      const data = await res.json();
+
+      // Agregar respuesta del bot
       setHistorial(prev => [
         ...prev,
-        { rol: "agent", texto: "Esta es una respuesta simulada del bot." }
+        { rol: "agent", texto: data.respuesta }
       ]);
-    }, 800);
+
+    } catch (error) {
+      setHistorial(prev => [
+        ...prev,
+        { rol: "agent", texto: "Error conectando con el servidor :(" }
+      ]);
+    }
+
+    // Reset campos
+    setMensaje("");
+    setArchivo(null);
   };
 
   const handleKey = (e) => {
@@ -43,44 +61,31 @@ export default function IA() {
 
   return (
     <div className="IA-container">
-      
-      {/* SIDEBAR */}
+
       <aside className="IA-sidebar">
         <h2>BoardAI</h2>
         <button className="new-chat">➕ New Chat</button>
         <ul>
           <li>📁 Mis archivos</li>
           <li>⚙ Configuración</li>
-          <li
-            onClick={() => navigate("/Start")}>
-              ↩︎ Inicio
-          </li>
-          
+          <li onClick={() => navigate("/Start")}>↩︎ Inicio</li>
         </ul>
       </aside>
 
-      {/* CHAT AREA */}
       <div className="IA-chat">
 
         <div className="IA-messages">
           {historial.map((m, i) => (
             <div key={i} className={`msg ${m.rol === "user" ? "user" : "agent"}`}>
               <p>{m.texto}</p>
-
-              {/* Si se envió archivo */}
-              {m.archivo && (
-                <span className="archivo-preview">📎 {m.archivo}</span>
-              )}
+              {m.archivo && <span className="archivo-preview">📎 {m.archivo}</span>}
             </div>
           ))}
 
           <div ref={chatEndRef} />
         </div>
 
-        {/* INPUT AREA */}
         <div className="IA-input">
-
-          {/* Botón para subir archivo */}
           <label className="file-btn">
             📎
             <input 
