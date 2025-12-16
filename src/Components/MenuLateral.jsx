@@ -24,9 +24,7 @@ function MenuLateral(){
         {/*Menu Lateral*/}
         <nav className={`MenuLateral ${abierto ? "mostrar" : ""}`}>
             <h2 className="MenuTitulo">Menu</h2>
-            <ul className="Opciones">
-                <li className="item-opcion">📢 Notificaciones</li>
-                
+            <ul className="Opciones">        
                 <li
                 className="item-opcion "
                 onClick={() => navigate("/MisClases")}>

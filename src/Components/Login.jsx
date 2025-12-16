@@ -48,7 +48,7 @@ export default function Login() {
     <div className="LoginCon">
       <div className="LoginImg">
         <img
-          src="https://i.pinimg.com/736x/cd/2c/de/cd2cde0acd7fe399e5f3b0f66e431125.jpg"
+          src="https://i.pinimg.com/736x/6a/99/d5/6a99d52370d6d2397b8853a2908ed827.jpg"
           alt="Login Illustration"
         />
       </div>
